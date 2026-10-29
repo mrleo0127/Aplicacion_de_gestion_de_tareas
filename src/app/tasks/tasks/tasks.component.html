@@ -1,0 +1,47 @@
+
+<ActionBar title="StudyFlow" class="action-bar studyflow-actionbar">
+  <NavigationButton visibility="hidden"></NavigationButton>
+
+  <ActionItem
+    text="☰ Menú"
+    (tap)="onDrawerButtonTap()"
+    android.position="actionBar"
+    ios.position="left"
+  ></ActionItem>
+</ActionBar>
+
+<ScrollView>
+  <StackLayout class="page-content">
+    <Label
+      text="Mis tareas"
+      class="page-title"
+    ></Label>
+
+    <Label
+      [text]="'Tienes ' + pendingCount + ' tareas pendientes'"
+      class="page-subtitle"
+    ></Label>
+
+    <StackLayout class="tasks-list">
+      <app-task-card
+        *ngFor="let task of tasks"
+        [task]="task"
+        (toggle)="toggleTask($event)"
+      ></app-task-card>
+    </StackLayout>
+
+    <Label
+      *ngIf="tasks.length === 0"
+      text="No hay tareas registradas."
+      class="empty-message"
+    ></Label>
+
+    <Label
+      [text]="platformMessage"
+      class="page-subtitle"
+    ></Label>
+  </StackLayout>
+</ScrollView>
+
+
+

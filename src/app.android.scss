@@ -1,0 +1,45 @@
+
+// Import common styles
+@import 'app-common';
+
+/* Barra superior de StudyFlow */
+.studyflow-actionbar {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+/* Fondo del panel lateral */
+.nt-drawer__content {
+  background-color: #f8fafc;
+}
+
+/* Encabezado del panel */
+.nt-drawer__header {
+  background-color: #1d4ed8;
+}
+
+/* Nombre y correo del encabezado */
+.nt-drawer__header-brand,
+.nt-drawer__header-footnote {
+  color: #ffffff;
+}
+
+/* Opciones del menú */
+.nt-drawer__list-item {
+  color: #334155;
+  background-color: #f8fafc;
+}
+
+/* Iconos del menú */
+.nt-drawer__list-item .nt-icon {
+  color: #2563eb;
+}
+
+/* Opción seleccionada */
+.nt-drawer__list-item.-selected {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+// Place any CSS rules you want to apply only on Android here
+

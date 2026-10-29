@@ -1,0 +1,30 @@
+
+<StackLayout class="task-card">
+  <GridLayout columns="*, auto" rows="auto, auto">
+    <Label
+      row="0"
+      col="0"
+      [text]="task.title"
+      class="task-title"
+      textWrap="true"
+    ></Label>
+
+    <Label
+      row="1"
+      col="0"
+      [text]="task.subject + ' • ' + task.dueDate"
+      class="task-details"
+      textWrap="true"
+    ></Label>
+
+    <Button
+      row="0"
+      rowSpan="2"
+      col="1"
+      [text]="task.completed ? 'Completada' : 'Pendiente'"
+      [class.completed]="task.completed"
+      class="task-button"
+      (tap)="onToggle()"
+    ></Button>
+  </GridLayout>
+</StackLayout>
